@@ -37,7 +37,7 @@ public class App {
         arbolNumeros.insert(10);
         arbolNumeros.insert(5);
         arbolNumeros.insert(3);
-        arbolNumeros.insert(8); /// INORDER 3, 5, 8, 10, 15, 20
+        arbolNumeros.insert(8); /// INORDER 3, 5, 8, 10, 15, 20Ñ
         arbolNumeros.insert(20); /// POSTORDER 3 8 5 15 20 10
         arbolNumeros.insert(15); // ANCHURA O NIVELES: 10 5 20 3 8 15
 
