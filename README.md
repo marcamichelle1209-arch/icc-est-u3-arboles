@@ -17,7 +17,7 @@ En esta práctica se implementaron árboles binarios de búsqueda en Java utiliz
 
 ### Captura de salida en consola
 
-ÑÑ
+![alt text](<Captura de pantalla 2026-06-19 234118.png>)
 
 ### Captura de App.java
 

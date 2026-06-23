@@ -4,6 +4,7 @@ import java.util.Random;
 
 import models.Person;
 import tress.BinaryTree;
+import tress.Ejercicio1;
 import tress.IntTree;
 
 public class App {
@@ -13,6 +14,8 @@ public class App {
         runIntTree();
         runPersonTree();
         runIntComparativaPesos();
+        runEjercicios();
+        runEjercicios1();
 
     }
 
@@ -60,6 +63,21 @@ public class App {
         System.out.println("Peso del arbol");
         int peso = arbolNumeros.obtenerPeso();
         System.out.println("el peso es " + peso);
+
+        
+
+    }
+    private static void runEjercicios(){
+        Ejercicio1 ejercicio1 = new Ejercicio1();
+        int[] numeros = new int[]{5,3,7,2,4,6,8};
+        ejercicio1.insert(numeros);
+
+    }
+
+    private static void runEjercicios1(){
+        Ejercicio1 ejercicio2 = new Ejercicio1();
+        int[] numeros = new int[]{4,2,7,1,3,6,9};
+        ejercicio2.insert(numeros);
 
     }
     private static void runPersonTree(){
