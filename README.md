@@ -27,7 +27,9 @@ En esta práctica se implementaron árboles binarios de búsqueda en Java utiliz
 **Descripción:**
 Se implementó la clase genérica `BinaryTree<T extends Comparable<T>>` que permite insertar cualquier tipo de objeto comparable. La inserción es recursiva: si el valor es menor va a la izquierda, si es mayor va a la derecha.
 
-![Captura BinaryTree](bin/assets/BinaryTree.png)
+![alt text](<Captura de pantalla 2026-06-23 122618.png>)
+![alt text](<Captura de pantalla 2026-06-23 122630.png>)
+![alt text](<Captura de pantalla 2026-06-23 122640.png>)
 
 ### Captura del código - IntTree.java
 ![alt text](<Captura de pantalla 2026-06-23 121513.png>)
@@ -63,5 +65,7 @@ Se implementó el uso del árbol genérico con objetos de tipo `Person`. La clas
 **Descripción:**
 Se realizó la comparacion del rendimiento entre las dos formas de calcular el peso del árbol con 50,000 nodos. El metodo  `getPeso()` retorna una variable que se incrementa en cada inserción, mientras que `peso()` recorre todo el árbol recursivamente. Se midió el tiempo de cada uno con `System.nanoTime()` para ver cual es mas rapido con esa cantidad de nodos ya que ese numero varia ya que puede ser aun mas grande.
 
+### Método implementado
+![alt text](<Captura de pantalla 2026-06-23 122412.png>)
 ### Captura de salida en consola
 ![alt text](<Captura de pantalla 2026-06-23 120907.png>)
