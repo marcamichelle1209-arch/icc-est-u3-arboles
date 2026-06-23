@@ -30,11 +30,16 @@ Se implementó la clase genérica `BinaryTree<T extends Comparable<T>>` que perm
 ![Captura BinaryTree](bin/assets/BinaryTree.png)
 
 ### Captura del código - IntTree.java
-
+![alt text](<Captura de pantalla 2026-06-23 121513.png>)
+![alt text](<Captura de pantalla 2026-06-23 121528.png>)
+![alt text](<Captura de pantalla 2026-06-23 121541.png>)
+![alt text](<Captura de pantalla 2026-06-23 121549.png>)
+![alt text](<Captura de pantalla 2026-06-23 121556.png>)
+![alt text](<Captura de pantalla 2026-06-23 121605.png>)
 **Descripción:**
 Se implementó `IntTree`, una versión específica para enteros. Incluye el método `peso()` para calcular el peso de forma recursiva y `getPeso()` que usa una variable acumulada durante la inserción.
 
-
+![alt text](<Captura de pantalla 2026-06-23 121845.png>)
 ---
 
 ## 2. Árbol Binario con Objetos - PersonTree
@@ -42,20 +47,21 @@ Se implementó `IntTree`, una versión específica para enteros. Incluye el mét
 **Fecha:** 17 de junio del 2026
 
 **Descripción:**
-Se implementó el uso del árbol genérico con objetos de tipo `Person`. La clase `Person` implementa `Comparable<Person>` comparando primero por edad y luego por nombre alfabéticamente, lo que determina la posición de cada nodo en el árbol.
+Se implementó el uso del árbol genérico con objetos de tipo `Person`. La clase `Person` se tiene el metodo `Comparable<Person>` comparando primero por la edad y luego por nombre alfabéticamente, lo que permite identificar la posición de cada nodo en el árbol.
 
 ### Método compareTo implementado
 
-
+![alt text](<Captura de pantalla 2026-06-23 121222.png>)
 ### Captura de salida en consola
-,€
----
-4C VVFGVBG
+
+![alt text](<Captura de pantalla 2026-06-23 121405.png>)
+
 ## 3. Comparativa de Rendimiento - Peso Variable vs Recursivo
 
 **Fecha:** 17 de junio del 2026
 
 **Descripción:**
-Se realizó una comparativa de rendimiento entre dos formas de calcular el peso del árbol con 50,000 nodos aleatorios. `getPeso()` retorna una variable que se incrementa en cada inserción (O(1)), mientras que `peso()` recorre todo el árbol recursivamente (O(n)). Se midió el tiempo de cada uno con `System.nanoTime()`.
+Se realizó la comparacion del rendimiento entre las dos formas de calcular el peso del árbol con 50,000 nodos. El metodo  `getPeso()` retorna una variable que se incrementa en cada inserción, mientras que `peso()` recorre todo el árbol recursivamente. Se midió el tiempo de cada uno con `System.nanoTime()` para ver cual es mas rapido con esa cantidad de nodos ya que ese numero varia ya que puede ser aun mas grande.
 
 ### Captura de salida en consola
+![alt text](<Captura de pantalla 2026-06-23 120907.png>)

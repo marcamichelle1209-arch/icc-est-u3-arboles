@@ -23,7 +23,8 @@ en este el metodo printTree realiza la impresion del arbol de forma vertical, de
 
 ![alt text](<Captura de pantalla 2026-06-22 195441.png>)
 
-En este segundo ejercicio imprimimos primero el arbol original, para despues por el metodo 
+En este segundo ejercicio imprimimos primero el arbol original, para despues por el metodo invertRecursively invertir el arbol de manera que los nodos que iban a la izquierda esten en la derecha como tambien los de la derecha esten en la izquierda, se podria decir que casi  es parecido con el ejercicio 1
+ 
 
 
 ## Salida de Consola ejercicio 2
