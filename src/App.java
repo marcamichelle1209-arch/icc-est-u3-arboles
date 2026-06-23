@@ -5,6 +5,7 @@ import java.util.Random;
 import models.Person;
 import tress.BinaryTree;
 import tress.Ejercicio1;
+import tress.Ejercicio2;
 import tress.IntTree;
 
 public class App {
@@ -15,7 +16,7 @@ public class App {
         runPersonTree();
         runIntComparativaPesos();
         runEjercicios();
-        runEjercicios1();
+        runEjercicio1();
 
     }
 
@@ -74,12 +75,17 @@ public class App {
 
     }
 
-    private static void runEjercicios1(){
-        Ejercicio1 ejercicio2 = new Ejercicio1();
-        int[] numeros = new int[]{4,2,7,1,3,6,9};
-        ejercicio2.insert(numeros);
+    public static void runEjercicio1(){
+        Ejercicio2 ejercicio2 = new Ejercicio2();
+        BinaryTree<Integer> tree = new BinaryTree<>();
+        int [] numeros = {4, 2, 7, 1, 3, 6, 9};
+        for (int n : numeros) {
+        tree.insert(n);
+    }
+    ejercicio2.invert(tree.getRoot());
 
     }
+
     private static void runPersonTree(){
         BinaryTree<Person> personTree = new BinaryTree<>();
         personTree.insert(new Person("Alice", 30));
