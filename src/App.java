@@ -6,6 +6,7 @@ import models.Person;
 import tress.BinaryTree;
 import tress.Ejercicio1;
 import tress.Ejercicio2;
+import tress.Ejercicio3;
 import tress.IntTree;
 
 public class App {
@@ -17,6 +18,8 @@ public class App {
         runIntComparativaPesos();
         runEjercicios();
         runEjercicio1();
+        runEjercicio2();
+        runEjercicio3();
 
     }
 
@@ -86,6 +89,16 @@ public class App {
 
     }
 
+    public static void runEjercicio3(){
+         Ejercicio3 ejercicio3 = new Ejercicio3();
+        BinaryTree<Integer> tree = new BinaryTree<>();
+        int [] numeros = {4, 2, 7, 1, 3, 6, 9};
+        for (int n : numeros) {
+        tree.insert(n);
+    }
+    ejercicio3.maxDepth(tree.getRoot());
+
+}
     private static void runPersonTree(){
         BinaryTree<Person> personTree = new BinaryTree<>();
         personTree.insert(new Person("Alice", 30));
