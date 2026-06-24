@@ -1,12 +1,18 @@
 
 
+import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
+import collections.sets.Sets;
+import models.Contacto;
 import models.Person;
+import node.Node;
 import tress.BinaryTree;
 import tress.Ejercicio1;
 import tress.Ejercicio2;
 import tress.Ejercicio3;
+import tress.Ejercicio4;
 import tress.IntTree;
 
 public class App {
@@ -16,12 +22,52 @@ public class App {
         runIntTree();
         runPersonTree();
         runIntComparativaPesos();
-        runEjercicios();
-        runEjercicio1();
+        runEjercicios1();
         runEjercicio2();
         runEjercicio3();
+        runEjercicio4();
+        runSets();
 
     }
+    
+    private static void runSets(){
+        Sets sets = new Sets();
+        //Primera implementacion
+
+        System.out.println(" HashSets");
+        Set<String> hashSet = sets.construirHashSet();
+        System.out.println(hashSet);
+        System.out.println("Tamanio: " + hashSet.size());
+        System.out.println(hashSet.contains("F"));
+
+
+          System.out.println(" LinkedHasset");
+        Set<String> lhSet = sets.construirLinkedHashSet();
+        System.out.println(lhSet );
+        System.out.println("Tamanio: " + lhSet.size());
+        System.out.println(lhSet.contains("F"));
+
+        System.out.println(" TreeSet");
+        Set<String> tSet = sets.construirLinkedHashSet();
+        System.out.println(tSet);
+        System.out.println("Tamanio: " + tSet.size());
+        System.out.println(tSet.contains("F"));
+
+
+        // Implementacion Treset contacto
+        System.out.println(" TreeSet");
+        Set<Contacto> tCSet = sets.construirTreeSetConComparador();
+        System.out.println (tCSet);
+        System.out.println( tCSet.size());
+        
+        // Implementacion Treset contacto
+        System.out.println("HashSet");
+        Set<Contacto> tCSet2 = sets.construirTreeSetConComparador();
+        System.out.println (tCSet2);
+        System.out.println( tCSet2.size());
+    }
+
+ 
 
     private static void runIntTree() {
         IntTree arbolNumeros = new IntTree(); /// CLASE ARBOL
@@ -71,14 +117,14 @@ public class App {
         
 
     }
-    private static void runEjercicios(){
+    private static void runEjercicios1(){
         Ejercicio1 ejercicio1 = new Ejercicio1();
         int[] numeros = new int[]{5,3,7,2,4,6,8};
         ejercicio1.insert(numeros);
 
     }
 
-    public static void runEjercicio1(){
+    public static void runEjercicio2(){
         Ejercicio2 ejercicio2 = new Ejercicio2();
         BinaryTree<Integer> tree = new BinaryTree<>();
         int [] numeros = {4, 2, 7, 1, 3, 6, 9};
@@ -88,17 +134,36 @@ public class App {
     ejercicio2.invert(tree.getRoot());
 
     }
+     public static void runEjercicio3(){
 
-    public static void runEjercicio3(){
-         Ejercicio3 ejercicio3 = new Ejercicio3();
+        Ejercicio3 ejercicio3 = new Ejercicio3();
         BinaryTree<Integer> tree = new BinaryTree<>();
         int [] numeros = {4, 2, 7, 1, 3, 6, 9};
         for (int n : numeros) {
         tree.insert(n);
-    }
-    ejercicio3.maxDepth(tree.getRoot());
+        }
+        List<List<Node>> niveLes =ejercicio3.listLevels(tree.getRoot()) ;
 
-}
+        for(List<Node> nivel : niveLes){
+            String linea = nivel.stream().map(n -> String.valueOf(n.getValue()))
+                            .collect(java.util.stream.Collectors.joining(" -> "));
+        System.out.println(linea);
+        }
+     }
+
+    public static void runEjercicio4(){
+         Ejercicio4 ejercicio4 = new Ejercicio4();
+        BinaryTree<Integer> tree = new BinaryTree<>();
+        int [] numeros = {4, 2, 7, 1, 3, 6, 9};
+        for (int n : numeros) {
+        tree.insert(n);
+        }
+        tree.insert(8);
+        System.out.println("Profundidad Maxima:" + ejercicio4.maxDepth(tree.getRoot()));
+    }
+    
+
+
     private static void runPersonTree(){
         BinaryTree<Person> personTree = new BinaryTree<>();
         personTree.insert(new Person("Alice", 30));
@@ -157,4 +222,5 @@ public class App {
         System.out.println("Tiempo pesoRecursivo(): "
                 + tiempoPesoRecursivoMs + " ms");
     }   
+
 }
