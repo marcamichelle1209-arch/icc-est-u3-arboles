@@ -1,10 +1,12 @@
 
 
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
 import collections.sets.Sets;
+import collections.sets.maps.Maps;
 import models.Contacto;
 import models.Person;
 import node.Node;
@@ -17,17 +19,22 @@ import tress.IntTree;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        
+           runMaps();
 
-        runIntTree();
-        runPersonTree();
-        runIntComparativaPesos();
-        runEjercicios1();
-        runEjercicio2();
-        runEjercicio3();
-        runEjercicio4();
-        runSets();
+        // runIntTree();
+         //runPersonTree();
+         //runIntComparativaPesos();
+        // runEjercicios1();
+       // runEjercicio2();
+        //runEjercicio3();
+       // runEjercicio4();
+        //runSets();
+     
 
+    }
+    private static void runMaps(){
+        Maps maps = new Maps();
+        maps.construirHashMap();
     }
     
     private static void runSets(){
