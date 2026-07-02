@@ -7,6 +7,7 @@ import java.util.Set;
 
 import collections.sets.Sets;
 import collections.sets.maps.Maps;
+import estructures.grafos.Grafo;
 import models.Contacto;
 import models.Person;
 import node.Node;
@@ -20,7 +21,7 @@ import tress.IntTree;
 public class App {
     public static void main(String[] args) throws Exception {
            runMaps();
-
+            runGrafo();
         // runIntTree();
          //runPersonTree();
          //runIntComparativaPesos();
@@ -30,6 +31,21 @@ public class App {
        // runEjercicio4();
         //runSets();
      
+
+    }
+    private static void runGrafo(){
+        Grafo<String> grafo = new Grafo<>();
+        
+        grafo.addEdgeUni("A", "B");
+        grafo.addEdgeUni("B", "C");
+        grafo.addEdgeUni("C", "A");
+        grafo.addEdgeUni("C", "D");
+        grafo.addEdgeUni("D", "C");
+        grafo.addEdgeUni("D", "J");
+        grafo.addEdgeUni("J", "D");
+        grafo.addEdgeUni("D", "B");
+
+        grafo.printlnGraph();
 
     }
     private static void runMaps(){

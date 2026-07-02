@@ -1,6 +1,6 @@
 package node;
 
-public class Node<T>{
+public class Node<T> {
     private T value;
     private Node<T> left;
     private Node<T> right;
@@ -41,6 +41,23 @@ public class Node<T>{
     public String toString() {
         return "Node [" + value + "]";
     }
+
+    @Override
+public boolean equals(Object obj) {
+    if (this == obj)
+        return true;
+
+    if (obj == null || getClass() != obj.getClass())
+        return false;
+
+    Node<?> other = (Node<?>) obj;
+    return value.equals(other.value);
+}
+
+@Override
+public int hashCode() {
+    return value.hashCode();
+}
 
 }
 

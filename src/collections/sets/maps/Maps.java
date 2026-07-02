@@ -1,8 +1,7 @@
 package collections.sets.maps;
 
-import java.nio.channels.Pipe.SourceChannel;
-import java.security.KeyStore.Entry;
-import java.util.ArrayList;
+import java.util.TreeMap;
+
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -48,9 +47,11 @@ public class Maps {
         System.out.println(entry);
 
     }
+    return map;
+}
 
     public LinkedHashMap<String,Integer> coLinkedHashMap(){
-        LinkedHashMap<String,Integer> lMap = new coLinkedHashMap<>();
+        LinkedHashMap<String,Integer> lMap = new LinkedHashMap<>();
 
       lMap.put("A", 2);
          lMap.put("B", 3);
@@ -65,10 +66,10 @@ public class Maps {
         System.out.println(lMap.entrySet());
         return lMap;
     }
-     return map;
+   
 
     public Map<String,Integer> cTreeMap(){
-        Map<String,Integer> lMap = new cTreeMap<>();
+        Map<String,Integer> lMap = new TreeMap<>();
 
       lMap.put("A", 2);
          lMap.put("B", 3);
@@ -84,12 +85,12 @@ public class Maps {
         return lMap;
     }
 
-    public void elimiarDuplicadosAndSort(List<Contacto> contactos){
-     Set<Contacto> tSet = new TreeSet<>();
-     for (Contacto contacto : contactos){
-        tSet.add(contacto);
-     }
-    }
+   //public void elimiarDuplicadosAndSort(List<Contacto> contactos){
+    // Set<Contacto> tSet = new TreeSet<>();
+     //for (Contacto contacto : contactos){
+       // tSet.add(contacto);
+     //}
+   // }
 }
      // put si exite el elmento actualiza el valor por el valor que esta duplicado
 
@@ -97,4 +98,4 @@ public class Maps {
 
 
     
-}
+
