@@ -58,7 +58,7 @@ Se implementó el uso del árbol genérico con objetos de tipo `Person`. La clas
 
 ![alt text](<Captura de pantalla 2026-06-23 121405.png>)
 
-## 3. Comparativa de Rendimiento - Peso Variable vs Recursivo
+## 3. Comparativa de Rendimiento - Peso Variable y Recursivo
 
 **Fecha:** 17 de junio del 2026
 
@@ -69,3 +69,26 @@ Se realizó la comparacion del rendimiento entre las dos formas de calcular el p
 ![alt text](<Captura de pantalla 2026-06-23 122412.png>)
 ### Captura de salida en consola
 ![alt text](<Captura de pantalla 2026-06-23 120907.png>)
+
+
+
+
+
+
+
+------------------------------------------------------------------------------
+## Utilizacion de grafo
+
+## Ejercicio elaborando un grafo
+
+
+## Descripcion:
+
+
+## Captura  del grafo elaborado
+
+
+
+
+## Captura de consola
+![alt text](<Captura de pantalla 2026-07-02 001643.png>)

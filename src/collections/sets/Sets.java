@@ -93,18 +93,18 @@ public class Sets {
      public Set<Contacto> construirHashSetContacto(){
         Set<Contacto> hCSet= new HashSet<>();
         Contacto c1 =(new Contacto("Juan", "Perez", "123456789"));
-      Contacto c2 =(new Contacto("Ana", "Gomez", "987654321"));
+        Contacto c2 =(new Contacto("Ana", "Gomez", "987654321"));
         Contacto c3 =(new Contacto("Pedro", "Lopez", "456789123"));
-       Contacto c4 =(new Contacto("Maria", "Rodriguez", "789123456"));
-     Contacto c5 =(new Contacto("Juan", "Perez", "123456789"));
+        Contacto c4 =(new Contacto("Maria", "Rodriguez", "789123456"));
+        Contacto c5 =(new Contacto("Juan", "Perez", "123456789"));
         Contacto c6 =(new Contacto("Juan", "Lopez", "123456789")); // Duplicado, no se agregará
         System.out.println("c1"+ hashCode()); // utliza la referncia de la memoria me da un hascode
         hCSet.add(c1);
-         hCSet.add(c2);
-          hCSet.add(c3);
-           hCSet.add(c4);
-            hCSet.add(c5);
-             hCSet.add(c6);
+        hCSet.add(c2);
+        hCSet.add(c3);
+        hCSet.add(c4);
+        hCSet.add(c5);
+        hCSet.add(c6);
             
              return hCSet;
 

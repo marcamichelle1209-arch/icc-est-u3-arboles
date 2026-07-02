@@ -33,6 +33,7 @@ public class App {
      
 
     }
+
     private static void runGrafo(){
         Grafo<String> grafo = new Grafo<>();
         
@@ -43,11 +44,14 @@ public class App {
         grafo.addEdgeUni("D", "C");
         grafo.addEdgeUni("D", "J");
         grafo.addEdgeUni("J", "D");
-        grafo.addEdgeUni("D", "B");
+        grafo.addEdgeUni("B", "D");
+
+        System.out.println("\n Resultado de Grafo: ");
 
         grafo.printlnGraph();
 
     }
+
     private static void runMaps(){
         Maps maps = new Maps();
         maps.construirHashMap();
@@ -165,9 +169,9 @@ public class App {
         for (int n : numeros) {
         tree.insert(n);
         }
-        List<List<Node>> niveLes =ejercicio3.listLevels(tree.getRoot()) ;
+        List<List<Node<Integer>>> niveLes = ejercicio3.listLevels(tree.getRoot());
 
-        for(List<Node> nivel : niveLes){
+        for(List<Node<Integer>> nivel : niveLes){
             String linea = nivel.stream().map(n -> String.valueOf(n.getValue()))
                             .collect(java.util.stream.Collectors.joining(" -> "));
         System.out.println(linea);
