@@ -1,7 +1,7 @@
 
 
 import java.util.List;
-import java.util.Map;
+
 import java.util.Random;
 import java.util.Set;
 
@@ -20,15 +20,15 @@ import tress.IntTree;
 
 public class App {
     public static void main(String[] args) throws Exception {
-           runMaps();
+           //runMaps();
             runGrafo();
         // runIntTree();
          //runPersonTree();
          //runIntComparativaPesos();
         // runEjercicios1();
        // runEjercicio2();
-        //runEjercicio3();
-       // runEjercicio4();
+        //nEjercicio3();
+       //nEjercicio4();
         //runSets();
      
 
@@ -75,21 +75,21 @@ public class App {
         System.out.println(lhSet.contains("F"));
 
         System.out.println(" TreeSet");
-        Set<String> tSet = sets.construirLinkedHashSet();
+        Set<String> tSet = sets.construirTreeSet();
         System.out.println(tSet);
         System.out.println("Tamanio: " + tSet.size());
         System.out.println(tSet.contains("F"));
 
 
         // Implementacion Treset contacto
-        System.out.println(" TreeSet");
+        System.out.println(" TreeSet contacto");
         Set<Contacto> tCSet = sets.construirTreeSetConComparador();
         System.out.println (tCSet);
         System.out.println( tCSet.size());
         
         // Implementacion Treset contacto
-        System.out.println("HashSet");
-        Set<Contacto> tCSet2 = sets.construirTreeSetConComparador();
+        System.out.println("HashSet contacto ");
+        Set<Contacto> tCSet2 = sets.construirHashSetContacto();
         System.out.println (tCSet2);
         System.out.println( tCSet2.size());
     }

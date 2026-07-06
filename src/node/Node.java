@@ -42,22 +42,22 @@ public class Node<T> {
         return "Node [" + value + "]";
     }
 
+     @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+
+        Node<?> other = (Node<?>) obj;
+        return value.equals(other.value);
+    }
+
     @Override
-public boolean equals(Object obj) {
-    if (this == obj)
-        return true;
-
-    if (obj == null || getClass() != obj.getClass())
-        return false;
-
-    Node<?> other = (Node<?>) obj;
-    return value.equals(other.value);
-}
-
-@Override
-public int hashCode() {
-    return value.hashCode();
-}
+    public int hashCode() {
+        return value.hashCode();
+    }
 
 }
 

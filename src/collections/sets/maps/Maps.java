@@ -19,7 +19,7 @@ public class Maps {
      map.put("A", 10);
      map.put("B", 20);
      map.put("C", 30);
-     map.put("A", 50);
+     map.put("A", 50);//***cTreeMap
 
      System.out.println(map.size());
      System.out.println(map);

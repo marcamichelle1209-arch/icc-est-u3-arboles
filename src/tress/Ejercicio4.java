@@ -4,13 +4,16 @@ import node.Node;
 
 public class Ejercicio4 {
     
-    public int maxDepth(Node<Integer> root){
-        if(root==null){
+    public int maxDepth(Node<Integer> root){ //-> 
+
+        if(root==null){ // -> Aqui esta linea de
             return 0;
         }
-            int left = maxDepth(root.getLeft());
-            int right = maxDepth(root.getRight());
-            return Math.max(left, right)+1;
+            int left = maxDepth(root.getLeft()); 
+
+            int right = maxDepth(root.getRight()); 
+
+            return Math.max(left, right)+1;  
         
            
         }  

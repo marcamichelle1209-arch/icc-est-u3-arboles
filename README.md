@@ -71,9 +71,59 @@ Se realizó la comparacion del rendimiento entre las dos formas de calcular el p
 ![alt text](<Captura de pantalla 2026-06-23 120907.png>)
 
 
+--------------------------------------------------------------------------------------------------------
+## Utilizacion de los SETS
+## Descripcion:
+
+Se implementó la clase `Sets` para comparar el comportamiento de las distintas implementaciones de `Set` en Java, tanto con `String` como con objetos personalizados (`Contacto`).
+
+### construirHashSet()
+Crea un `HashSet<String>`. No garantiza ningún orden específico al recorrerlo, ya que internamente organiza los elementos según su `hashCode()`. Se usa cuando no importa el orden y solo se busca evitar duplicados con la mayor rapidez posible.
+
+### construirLinkedHashSet()
+Crea un `LinkedHashSet<String>`. A diferencia del `HashSet`, mantiene el orden en que los elementos fueron insertados. Se usa cuando se necesita evitar duplicados pero conservando el orden de inserción.
+
+### construirTreeSet()
+Crea un `TreeSet<String>`. Ordena automáticamente los elementos de forma alfabética (orden natural definido por `Comparable`). Se usa cuando se necesita que los elementos estén siempre ordenados sin tener que ordenarlos manualmente después.
+
+### construirTreeSetConComparador()
+Crea un `TreeSet<Contacto>`. Como la clase `Contacto` implementa `Comparable<Contacto>` comparando por el campo `nombre`, el `TreeSet` ordena los contactos alfabéticamente por nombre. Al usar `compareTo()` para detectar duplicados, dos contactos con el mismo nombre se consideran "iguales" aunque tengan apellido o teléfono distintos.
+
+### construirHashSetContacto()
+Crea un `HashSet<Contacto>`. Para detectar duplicados usa los métodos `equals()` y `hashCode()` de la clase `Contacto`, los cuales comparan los tres campos (`nombre`, `apellido`, `telefono`). Por eso el criterio de duplicado es distinto al del `TreeSet`: aquí solo se descarta un contacto si es idéntico en todos sus campos.
+
+## Captura del Codigo realizado:
+Esto es lo que se coloco en el app  para que pueda correr el programa -> ![alt text](<Captura de pantalla 2026-07-06 075905.png>)
+![alt text](image-5.png)
+![alt text](<Captura de pantalla 2026-07-06 073215.png>)
+
+## Captura de Salida de Consola
+![alt text](<Captura de pantalla 2026-07-06 075435.png>)
+
+-----------------------------------------------------------------------------------------------------
+## Utilizacion de MAAPS
+## Descrpcion:
+
+Se implementó la clase `Maps` para practicar el uso de las distintas implementaciones de `Map` en Java, estructuras que almacenan información en pares clave-valor (`Map<K,V>`).
+
+### construirHashMap()
+Crea un `HashMap<String, Integer>`. No garantiza ningún orden al recorrerlo, ya que organiza las claves internamente según su `hashCode()`. Si se inserta una clave que ya existe (como `"A"` en este caso), el valor anterior se sobrescribe con el nuevo. El método también muestra las distintas formas de recorrer un mapa: con `values().toArray()` para obtener los valores como arreglo, con `keySet()` para iterar solo las claves, y con `entrySet()` para recorrer cada par clave-valor completo.
+
+### coLinkedHashMap()
+Crea un `LinkedHashMap<String, Integer>`. A diferencia del `HashMap`, mantiene el orden en que las claves fueron insertadas por primera vez. Al igual que el `HashMap`, si se repite una clave, el valor se sobrescribe pero la clave conserva su posición original de inserción.
+
+### cTreeMap()
+Crea un `TreeMap<String, Integer>`. Ordena automáticamente las claves de forma alfabética (orden natural definido por `Comparable`), sin importar el orden en que se insertaron. Se usa cuando se necesita recorrer el mapa siempre en un orden predecible según la clave.
 
 
+## Captura del Codigo realizado:
+Esto es lo que se coloco en el app  para que pueda correr el programa -> ![alt text](<Captura de pantalla 2026-07-06 075920.png>)
+![alt text](<Captura de pantalla 2026-07-06 073558.png>)
+![alt text](<Captura de pantalla 2026-07-06 073624.png>)
 
+## Captura de Salida de Consola
+
+![alt text](<Captura de pantalla 2026-07-06 075421.png>)
 
 
 ------------------------------------------------------------------------------
@@ -81,14 +131,15 @@ Se realizó la comparacion del rendimiento entre las dos formas de calcular el p
 
 ## Ejercicio elaborando un grafo
 
-
 ## Descripcion:
 
-
+Primeramente se creo una clase grafo de tipo generica utilizando Map y Set. En donde cada node del mapa tiene una clave. En donde el metodo que se creo addEdgeUni para poder craar la conexion en una sola direciion. Ademas el metodo para imprimir en grafo
 ## Captura  del grafo elaborado
 
+![alt text](<Captura de pantalla 2026-07-06 065241.png>) pero para poder realizar esto o que se ejecute en el app tuvimo s que agregar 2 metodos a la clase node. Por que si no nos da este error
+-> [alt text](image-3.png) pero al agregar este en la clase Node ahi si compilaba sin ningun error -> ![alt text](image-4.png) 
 
+Esto es lo que se agrego en el app para que pueda funcionar ![alt text](<Captura de pantalla 2026-07-06 074906.png>)
+## Captura de  salida de consola:
 
-
-## Captura de consola
 ![alt text](<Captura de pantalla 2026-07-02 001643.png>)
